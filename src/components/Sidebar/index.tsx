@@ -1,23 +1,23 @@
 'use client'
 
+import { Logo } from '@/components/Sidebar/Logo'
 import {
+  Search,
   BarChart,
   CheckSquare,
-  Cog,
   Flag,
   Home,
-  LifeBuoy,
-  Menu,
-  Search,
   SquareStack,
   Users,
+  LifeBuoy,
+  Cog,
+  Menu,
 } from 'lucide-react'
-import { Logo } from './Logo'
 import { NaviItem } from './NavItem'
 import { UsedSpaceWidget } from './UsedSpaceWidget'
 import { Profile } from './Profile'
 import * as Collapsible from '@radix-ui/react-collapsible'
-import * as Input from '../Input'
+import * as Input from '@/components/Input'
 import { Button } from '../Button'
 
 export function Sidebar() {
@@ -38,7 +38,7 @@ export function Sidebar() {
       >
         <Input.Root>
           <Input.Prefix>
-            <Search className="h-5 w-5 text-zinc-500" />
+            <Search className="h-5 w-5 to-zinc-500" />
           </Input.Prefix>
           <Input.Control placeholder="Search" />
         </Input.Root>
@@ -60,7 +60,7 @@ export function Sidebar() {
 
           <UsedSpaceWidget />
 
-          <div className="h-px bg-zinc-200" />
+          <div className="h-px bg-zinc-200 dark:bg-zinc-700" />
 
           <Profile />
         </div>
